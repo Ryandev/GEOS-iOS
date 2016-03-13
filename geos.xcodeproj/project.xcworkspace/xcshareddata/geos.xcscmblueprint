@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "81DE51C44B3075A6C9E94A9516278EF34084F8B1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E7446FDAF64E06F9864808377C34BB7144F7C949" : 0,
+    "81DE51C44B3075A6C9E94A9516278EF34084F8B1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8BF13D5B-27DA-46A5-9ACA-35948D02500B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E7446FDAF64E06F9864808377C34BB7144F7C949" : "GEOS-iOS\/geos\/",
+    "81DE51C44B3075A6C9E94A9516278EF34084F8B1" : "GEOS-iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "geos",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "geos.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Ryandev\/GEOS-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "81DE51C44B3075A6C9E94A9516278EF34084F8B1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jehc\/geos",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E7446FDAF64E06F9864808377C34BB7144F7C949"
+    }
+  ]
+}
