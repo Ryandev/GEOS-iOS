@@ -1399,7 +1399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n#sed 's/cmakedefine/define/g' ${SRCROOT}/geos/include/geos/platform.h.cmake > ${SRCROOT}/geos/include/geos/platform.h";
+			shellScript = "sed 's/cmakedefine/define/g' ${SRCROOT}/geos/include/geos/platform.h.cmake > ${SRCROOT}/geos/include/geos/platform.h";
 		};
 		B7F969A11C96139500C78357 /* Make geos_svn_revision.h */ = {
 			isa = PBXShellScriptBuildPhase;
