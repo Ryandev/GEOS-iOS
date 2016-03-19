@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73273871C9DC8D300AB3FE9 /* export.h in Headers */ = {isa = PBXBuildFile; fileRef = B73273851C9DC8D300AB3FE9 /* export.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B73273881C9DC8D300AB3FE9 /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = B73273861C9DC8D300AB3FE9 /* platform.h */; };
 		B73D8A151C98AEC400F327B7 /* unload.h in Headers */ = {isa = PBXBuildFile; fileRef = B73D8A141C98AEC400F327B7 /* unload.h */; };
 		B73E00E01C9603A0001AC923 /* geos_c.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B73E00DB1C9603A0001AC923 /* geos_c.cpp */; };
 		B73E00E51C96040B001AC923 /* geos_c.h in Headers */ = {isa = PBXBuildFile; fileRef = B73E00E41C96040B001AC923 /* geos_c.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -310,7 +312,6 @@
 		B7F9699C1C96115F00C78357 /* LinearComponentExtracter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7F969991C96115F00C78357 /* LinearComponentExtracter.cpp */; };
 		B7F9699D1C96115F00C78357 /* PointExtracter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7F9699A1C96115F00C78357 /* PointExtracter.cpp */; };
 		B7F9699E1C96115F00C78357 /* PolygonExtracter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7F9699B1C96115F00C78357 /* PolygonExtracter.cpp */; };
-		B7F969AA1C961D3C00C78357 /* ieeefp.h in Headers */ = {isa = PBXBuildFile; fileRef = B7F969A91C961D3C00C78357 /* ieeefp.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -330,6 +331,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B73273851C9DC8D300AB3FE9 /* export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = export.h; path = geos/export.h; sourceTree = "<group>"; };
+		B73273861C9DC8D300AB3FE9 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform.h; path = geos/platform.h; sourceTree = "<group>"; };
 		B73D8A141C98AEC400F327B7 /* unload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unload.h; path = geos/unload.h; sourceTree = "<group>"; };
 		B73E00D61C9602CA001AC923 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		B73E00D71C9602CA001AC923 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = resources/module.modulemap; sourceTree = SOURCE_ROOT; };
@@ -641,7 +644,6 @@
 		B7F969991C96115F00C78357 /* LinearComponentExtracter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinearComponentExtracter.cpp; sourceTree = "<group>"; };
 		B7F9699A1C96115F00C78357 /* PointExtracter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointExtracter.cpp; sourceTree = "<group>"; };
 		B7F9699B1C96115F00C78357 /* PolygonExtracter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PolygonExtracter.cpp; sourceTree = "<group>"; };
-		B7F969A91C961D3C00C78357 /* ieeefp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ieeefp.h; path = inc/ieeefp.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -655,14 +657,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B73D8A161C98AECE00F327B7 /* private */ = {
-			isa = PBXGroup;
-			children = (
-				B7F969A91C961D3C00C78357 /* ieeefp.h */,
-			);
-			name = private;
-			sourceTree = "<group>";
-		};
 		B73E00D91C9603A0001AC923 /* capi */ = {
 			isa = PBXGroup;
 			children = (
@@ -677,7 +671,8 @@
 		B73E00E61C96043D001AC923 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				B73D8A161C98AECE00F327B7 /* private */,
+				B73273851C9DC8D300AB3FE9 /* export.h */,
+				B73273861C9DC8D300AB3FE9 /* platform.h */,
 				B78573391C98A6C4007EFB17 /* geom */,
 				B785733A1C98A6C4007EFB17 /* io */,
 				B785733B1C98A6C4007EFB17 /* noding */,
@@ -1355,13 +1350,14 @@
 				B73E04601C96043D001AC923 /* geos.h in Headers */,
 				B78573361C98A651007EFB17 /* noding.h in Headers */,
 				B78573371C98A651007EFB17 /* operation.h in Headers */,
+				B73273881C9DC8D300AB3FE9 /* platform.h in Headers */,
 				B73E00E51C96040B001AC923 /* geos_c.h in Headers */,
+				B73273871C9DC8D300AB3FE9 /* export.h in Headers */,
 				B78573381C98A651007EFB17 /* version.h in Headers */,
 				B78573351C98A651007EFB17 /* io.h in Headers */,
 				B759FECC1C95AE4000845D6B /* IndexedNestedRingTester.h in Headers */,
 				B73D8A151C98AEC400F327B7 /* unload.h in Headers */,
 				B759FE841C95AE4000845D6B /* BufferInputLineSimplifier.h in Headers */,
-				B7F969AA1C961D3C00C78357 /* ieeefp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1434,7 +1430,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "sed 's/cmakedefine/define/g' ${SRCROOT}/geos/include/geos/platform.h.cmake > ${SRCROOT}/geos/include/geos/platform.h\nexit 0";
+			shellScript = "#copy platform.h\nPLATFORMFILE=${SRCROOT}/geos/include/geos/platform.h\n\ncp ${SRCROOT}/geos/include/geos/platform.h.cmake $PLATFORMFILE\n\n\nsed -i '' -e 's/cmakedefine/define/g' $PLATFORMFILE\nsed -i '' -e 's/#define HAVE_IEEEFP_H 1/#undef HAVE_IEEEFP_H/g' $PLATFORMFILE\n\n\nexit 0";
 		};
 		B7F969A11C96139500C78357 /* Make geos_svn_revision.h */ = {
 			isa = PBXShellScriptBuildPhase;
