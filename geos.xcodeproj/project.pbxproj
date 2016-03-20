@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B73273871C9DC8D300AB3FE9 /* export.h in Headers */ = {isa = PBXBuildFile; fileRef = B73273851C9DC8D300AB3FE9 /* export.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B73273881C9DC8D300AB3FE9 /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = B73273861C9DC8D300AB3FE9 /* platform.h */; };
+		B732738A1C9DD06F00AB3FE9 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = B73273891C9DD06F00AB3FE9 /* geom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B73D8A151C98AEC400F327B7 /* unload.h in Headers */ = {isa = PBXBuildFile; fileRef = B73D8A141C98AEC400F327B7 /* unload.h */; };
 		B73E00E01C9603A0001AC923 /* geos_c.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B73E00DB1C9603A0001AC923 /* geos_c.cpp */; };
 		B73E00E51C96040B001AC923 /* geos_c.h in Headers */ = {isa = PBXBuildFile; fileRef = B73E00E41C96040B001AC923 /* geos_c.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -333,6 +334,7 @@
 /* Begin PBXFileReference section */
 		B73273851C9DC8D300AB3FE9 /* export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = export.h; path = geos/export.h; sourceTree = "<group>"; };
 		B73273861C9DC8D300AB3FE9 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform.h; path = geos/platform.h; sourceTree = "<group>"; };
+		B73273891C9DD06F00AB3FE9 /* geom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = geom.h; path = geos/geom.h; sourceTree = "<group>"; };
 		B73D8A141C98AEC400F327B7 /* unload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unload.h; path = geos/unload.h; sourceTree = "<group>"; };
 		B73E00D61C9602CA001AC923 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		B73E00D71C9602CA001AC923 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = resources/module.modulemap; sourceTree = SOURCE_ROOT; };
@@ -671,6 +673,7 @@
 		B73E00E61C96043D001AC923 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				B73273891C9DD06F00AB3FE9 /* geom.h */,
 				B73273851C9DC8D300AB3FE9 /* export.h */,
 				B73273861C9DC8D300AB3FE9 /* platform.h */,
 				B78573391C98A6C4007EFB17 /* geom */,
@@ -1353,6 +1356,7 @@
 				B73273881C9DC8D300AB3FE9 /* platform.h in Headers */,
 				B73E00E51C96040B001AC923 /* geos_c.h in Headers */,
 				B73273871C9DC8D300AB3FE9 /* export.h in Headers */,
+				B732738A1C9DD06F00AB3FE9 /* geom.h in Headers */,
 				B78573381C98A651007EFB17 /* version.h in Headers */,
 				B78573351C98A651007EFB17 /* io.h in Headers */,
 				B759FECC1C95AE4000845D6B /* IndexedNestedRingTester.h in Headers */,
