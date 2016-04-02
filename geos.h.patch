@@ -1,0 +1,10 @@
+--- GEOS-iOS/geos/include/geos.h	2016-03-14 21:57:29.000000000 +0000
++++ traget.txt	2016-04-02 15:27:43.000000000 +0100
+@@ -27,6 +27,7 @@
+ #include <geos/util.h>
+ #include <geos/io.h>
+ #include <geos/unload.h>
++#include <geos/GEOSHelper.h>
+ 
+ /// Basic namespace for all GEOS functionalities.
+ namespace geos {

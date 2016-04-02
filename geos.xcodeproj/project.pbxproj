@@ -290,6 +290,8 @@
 		B78573421C98A91A007EFB17 /* io in CopyFiles */ = {isa = PBXBuildFile; fileRef = B785733A1C98A6C4007EFB17 /* io */; };
 		B78573431C98A91A007EFB17 /* noding in CopyFiles */ = {isa = PBXBuildFile; fileRef = B785733B1C98A6C4007EFB17 /* noding */; };
 		B78573441C98A91A007EFB17 /* operation in CopyFiles */ = {isa = PBXBuildFile; fileRef = B785733C1C98A6C4007EFB17 /* operation */; };
+		B790C69D1CB00D9B00350F23 /* GEOSHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B790C69B1CB00D9B00350F23 /* GEOSHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B790C69E1CB00D9B00350F23 /* GEOSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B790C69C1CB00D9B00350F23 /* GEOSHelper.m */; };
 		B7F969691C960C1400C78357 /* Centroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7F969681C960C1400C78357 /* Centroid.cpp */; };
 		B7F9696B1C960CCD00C78357 /* GeometryNoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7F9696A1C960CCD00C78357 /* GeometryNoder.cpp */; };
 		B7F9696D1C960CE400C78357 /* Interrupt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7F9696C1C960CE400C78357 /* Interrupt.cpp */; };
@@ -623,6 +625,8 @@
 		B785733A1C98A6C4007EFB17 /* io */ = {isa = PBXFileReference; lastKnownFileType = folder; name = io; path = geos/io; sourceTree = "<group>"; };
 		B785733B1C98A6C4007EFB17 /* noding */ = {isa = PBXFileReference; lastKnownFileType = folder; name = noding; path = geos/noding; sourceTree = "<group>"; };
 		B785733C1C98A6C4007EFB17 /* operation */ = {isa = PBXFileReference; lastKnownFileType = folder; name = operation; path = geos/operation; sourceTree = "<group>"; };
+		B790C69B1CB00D9B00350F23 /* GEOSHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEOSHelper.h; sourceTree = "<group>"; };
+		B790C69C1CB00D9B00350F23 /* GEOSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEOSHelper.m; sourceTree = "<group>"; };
 		B7F969681C960C1400C78357 /* Centroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Centroid.cpp; sourceTree = "<group>"; };
 		B7F9696A1C960CCD00C78357 /* GeometryNoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeometryNoder.cpp; sourceTree = "<group>"; };
 		B7F9696C1C960CE400C78357 /* Interrupt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Interrupt.cpp; sourceTree = "<group>"; };
@@ -697,6 +701,7 @@
 				B73E00E61C96043D001AC923 /* include */,
 				B73E00D91C9603A0001AC923 /* capi */,
 				B759FAD41C95AE3F00845D6B /* src */,
+				B790C69A1CB00D9B00350F23 /* objc */,
 				B759F9181C95AE0E00845D6B /* resources */,
 				B759F90E1C95AD9900845D6B /* Products */,
 			);
@@ -1307,6 +1312,15 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		B790C69A1CB00D9B00350F23 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				B790C69B1CB00D9B00350F23 /* GEOSHelper.h */,
+				B790C69C1CB00D9B00350F23 /* GEOSHelper.m */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
 		B7F9696E1C960D0F00C78357 /* intersection */ = {
 			isa = PBXGroup;
 			children = (
@@ -1357,6 +1371,7 @@
 				B73E00E51C96040B001AC923 /* geos_c.h in Headers */,
 				B73273871C9DC8D300AB3FE9 /* export.h in Headers */,
 				B732738A1C9DD06F00AB3FE9 /* geom.h in Headers */,
+				B790C69D1CB00D9B00350F23 /* GEOSHelper.h in Headers */,
 				B78573381C98A651007EFB17 /* version.h in Headers */,
 				B78573351C98A651007EFB17 /* io.h in Headers */,
 				B759FECC1C95AE4000845D6B /* IndexedNestedRingTester.h in Headers */,
@@ -1375,6 +1390,7 @@
 				B7F969A11C96139500C78357 /* Make geos_svn_revision.h */,
 				B75902331C95B1B200845D6B /* Copy platform.h */,
 				B7F969AB1C9622A900C78357 /* Copy geos_c.h */,
+				B790C69F1CB00EBB00350F23 /* Patch geos.h */,
 				B7F969A61C96173C00C78357 /* Update version.h */,
 				B759F9081C95AD9900845D6B /* Sources */,
 				B759F9091C95AD9900845D6B /* Frameworks */,
@@ -1435,6 +1451,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#copy platform.h\nPLATFORMFILE=${SRCROOT}/geos/include/geos/platform.h\n\ncp ${SRCROOT}/geos/include/geos/platform.h.cmake $PLATFORMFILE\n\n\nsed -i '' -e 's/cmakedefine/define/g' $PLATFORMFILE\nsed -i '' -e 's/#define HAVE_IEEEFP_H 1/#undef HAVE_IEEEFP_H/g' $PLATFORMFILE\n\n\nexit 0";
+		};
+		B790C69F1CB00EBB00350F23 /* Patch geos.h */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Patch geos.h";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "patch ${SRCROOT}/geos/include/geos.h ${SRCROOT}/geos.h.patch";
 		};
 		B7F969A11C96139500C78357 /* Make geos_svn_revision.h */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1617,6 +1647,7 @@
 				B759FDF11C95AE4000845D6B /* Point.cpp in Sources */,
 				B759FE7C1C95AE4000845D6B /* SingleInteriorIntersectionFinder.cpp in Sources */,
 				B759FE6D1C95AE4000845D6B /* IteratedNoder.cpp in Sources */,
+				B790C69E1CB00D9B00350F23 /* GEOSHelper.m in Sources */,
 				B759FE5B1C95AE4000845D6B /* Writer.cpp in Sources */,
 				B759FE6B1C95AE4000845D6B /* IntersectionAdder.cpp in Sources */,
 				B759FE2F1C95AE4000845D6B /* Root.cpp in Sources */,
