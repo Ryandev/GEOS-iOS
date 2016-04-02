@@ -1464,7 +1464,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "patch ${SRCROOT}/geos/include/geos.h ${SRCROOT}/geos.h.patch";
+			shellScript = "patch ${SRCROOT}/geos/include/geos.h ${SRCROOT}/geos.h.patch\nexit 0";
 		};
 		B7F969A11C96139500C78357 /* Make geos_svn_revision.h */ = {
 			isa = PBXShellScriptBuildPhase;
