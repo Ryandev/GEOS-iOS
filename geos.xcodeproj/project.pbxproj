@@ -1450,7 +1450,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#copy platform.h\nPLATFORMFILE=${SRCROOT}/geos/include/geos/platform.h\n\ncp ${SRCROOT}/geos/include/geos/platform.h.cmake $PLATFORMFILE\n\n\nsed -i '' -e 's/cmakedefine/define/g' $PLATFORMFILE\nsed -i '' -e 's/#define HAVE_IEEEFP_H 1/#undef HAVE_IEEEFP_H/g' $PLATFORMFILE\n\n\nexit 0";
+			shellScript = "#copy platform.h\nPLATFORMFILE=\"${SRCROOT}/geos/include/geos/platform.h\"\n\ncp \"${SRCROOT}/geos/include/geos/platform.h.cmake\" \"$PLATFORMFILE\"\n\n\nsed -i '' -e 's/cmakedefine/define/g' \"$PLATFORMFILE\"\nsed -i '' -e 's/#define HAVE_IEEEFP_H 1/#undef HAVE_IEEEFP_H/g' \"$PLATFORMFILE\"\n\n\nexit 0";
 		};
 		B790C69F1CB00EBB00350F23 /* Patch geos.h */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1464,7 +1464,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "patch ${SRCROOT}/geos/include/geos.h ${SRCROOT}/geos.h.patch\nexit 0";
+			shellScript = "patch \"${SRCROOT}/geos/include/geos.h\" \"${SRCROOT}/geos.h.patch\"\nexit 0";
 		};
 		B7F969A11C96139500C78357 /* Make geos_svn_revision.h */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1492,7 +1492,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "MAJOR=3\nMINOR=5\nPATCH=0\nNAME=3.5.0\n\nGEOS_H=${SRCROOT}/geos/include/geos/version.h\necho $GEOS_H\n\ncp ${SRCROOT}/geos/include/geos/version.h.in $GEOS_H\n\necho $MAJOR\n\nsed \"s/@VERSION_MAJOR@/$MAJOR/g\" $GEOS_H > /tmp/geos.h && mv /tmp/geos.h $GEOS_H\n\nsed \"s/@VERSION_MINOR@/$MINOR/g\" $GEOS_H > /tmp/geos.h && mv /tmp/geos.h $GEOS_H\n\nsed \"s/@VERSION_PATCH@/$PATCH/g\" $GEOS_H > /tmp/geos.h && mv /tmp/geos.h $GEOS_H\n\nsed \"s/@VERSION@/$NAME/g\" $GEOS_H > /tmp/geos.h && mv /tmp/geos.h $GEOS_H\n\nsed \"s/@JTS_PORT@/$NAME/g\" $GEOS_H > /tmp/geos.h && mv /tmp/geos.h $GEOS_H\n";
+			shellScript = "MAJOR=3\nMINOR=5\nPATCH=0\nNAME=3.5.0\n\nGEOS_H=\"${SRCROOT}/geos/include/geos/version.h\"\necho $GEOS_H\n\ncp \"${SRCROOT}/geos/include/geos/version.h.in\" \"$GEOS_H\"\n\necho $MAJOR\n\nsed \"s/@VERSION_MAJOR@/$MAJOR/g\" \"$GEOS_H\" > /tmp/geos.h && mv /tmp/geos.h \"$GEOS_H\"\n\nsed \"s/@VERSION_MINOR@/$MINOR/g\" \"$GEOS_H\" > /tmp/geos.h && mv /tmp/geos.h \"$GEOS_H\"\n\nsed \"s/@VERSION_PATCH@/$PATCH/g\" \"$GEOS_H\" > /tmp/geos.h && mv /tmp/geos.h \"$GEOS_H\"\n\nsed \"s/@VERSION@/$NAME/g\" \"$GEOS_H\" > /tmp/geos.h && mv /tmp/geos.h \"$GEOS_H\"\n\nsed \"s/@JTS_PORT@/$NAME/g\" \"$GEOS_H\" > /tmp/geos.h && mv /tmp/geos.h \"$GEOS_H\"";
 		};
 		B7F969AB1C9622A900C78357 /* Copy geos_c.h */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1506,7 +1506,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp ${SRCROOT}/geos/capi/geos_c.h.in ${SRCROOT}/geos/capi/geos_c.h\nexit 0";
+			shellScript = "cp \"${SRCROOT}/geos/capi/geos_c.h.in\" \"${SRCROOT}/geos/capi/geos_c.h\"\nexit 0";
 		};
 /* End PBXShellScriptBuildPhase section */
 
